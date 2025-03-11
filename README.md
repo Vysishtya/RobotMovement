@@ -1,6 +1,6 @@
 # RobotMovement
 Robot movements according to the given command in an infinite grid
-**note**
+# note
 -coordinates(0,0) represents : (x,y).
 -where: N : +y
         S : -y
@@ -22,7 +22,7 @@ Robot movements according to the given command in an infinite grid
 
 -open Main.java in intelliJ.
 - click **run** at the top.
-
+# how to change ID and Give commands
 - you can change the Robot ID and commands in class **Main** directly and can add robots.
 
 
