@@ -2,10 +2,10 @@
 Robot movements according to the given command in an infinite grid
 # note
 -coordinates(0,0) represents : (x,y).
--where: N : +y
-        S : -y
-        E : +x
-        w : -X
+- N : +y
+-  S : -y
+-  E : +x
+ -  w : -X
   
 # how to run the program
 -Download and install [intellij IDEA](https://www.jetbrains.com/idea/download/).
