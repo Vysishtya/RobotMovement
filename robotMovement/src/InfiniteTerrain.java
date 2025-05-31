@@ -32,8 +32,8 @@ class InfiniteTerrain {
             return;
         }
 
-        char direction = command.charAt(0);
-        int steps = Integer.parseInt(command.substring(1));
+        String direction = command.substring(0, command.length() - 1).toUpperCase();
+        int steps = Integer.parseInt(command.substring(command.length() - 1));
 
         Position currentPos = robotPositions.get(id);
         int x = currentPos.x, y = currentPos.y;
@@ -42,10 +42,16 @@ class InfiniteTerrain {
         for (int i = 0; i < steps; i++) {
             int newX = x, newY = y;
 
-            if (direction == 'N') newY++;
-            else if (direction == 'S') newY--;
-            else if (direction == 'E') newX++;
-            else if (direction == 'W') newX--;
+            switch (direction) {
+                case "N": newY++; break;
+                case "S": newY--; break;
+                case "E": newX++; break;
+                case "W": newX--; break;
+                case "NE": newX++; newY++; break;
+                case "NW": newX--; newY++; break;
+                case "SE": newX++; newY--; break;
+                case "SW": newX--; newY--; break;
+                }
 
             //  To check if the new position is occupied by another robot
             if (occupiedPositions.contains(newX + "," + newY)) {
